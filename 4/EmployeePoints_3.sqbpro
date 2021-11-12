@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/kaldaeva/Desktop/учеба/Аналитика БД/EmployeePoints.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="491"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,14:mainEmployeePoints"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="EmplScore" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="43"/><column index="2" value="45"/><column index="3" value="73"/><column index="4" value="46"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="EmployeePoints" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="167"/><column index="2" value="112"/><column index="3" value="219"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Создание таблицы">INSERT INTO EmployeePoints (Employee, Point, Date)
+VALUES
+('Маша', 5, '2020-01-01'),
+('Петя', 4, '2020-01-01'),
+('Вася', 3, '2020-01-01'),
+('Саша', 4, '2020-01-01'),
+('Маша', 4, '2020-01-02'),
+('Петя', 4, '2020-01-02'),
+('Вася', 4, '2020-01-02'),
+('Саша', 5, '2020-01-02'),
+('Маша', 5, '2020-01-03'),
+('Петя', 3, '2020-01-03'),
+('Вася', 2, '2020-01-03'),
+('Саша', 5, '2020-01-03'),
+('Маша', 3, '2020-01-04'),
+('Петя', 3, '2020-01-04'),
+('Вася', 3, '2020-01-04'),
+('Саша', 3, '2020-01-04'),
+('Максим', 2, '2020-01-04'),
+('Маша', 5, '2020-01-05'),
+('Петя', 3, '2020-01-05'),
+('Вася', 3, '2020-01-05'),
+('Саша', 3, '2020-01-05')
+
+
+</sql><sql name="Пункт 2 дз">SELECT DISTINCT Employee FROM EmployeePoints</sql><sql name="Пункт 3 дз">SELECT Employee, COUNT (Point) as NumberOfFive
+from EmployeePoints
+WHERE Point='5'
+GROUP BY Employee
+ORDER BY NumberOfFive DESC</sql><current_tab id="0"/></tab_sql></sqlb_project>
